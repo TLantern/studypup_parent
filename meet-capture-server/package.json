@@ -1,0 +1,15 @@
+{
+  "name": "meet-capture-server",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js"
+  },
+  "dependencies": {
+    "@deepgram/sdk": "^3.5.0",
+    "dotenv": "^16.4.5",
+    "firebase-admin": "^12.0.0",
+    "ws": "^8.17.0"
+  }
+}

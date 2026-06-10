@@ -1,0 +1,26 @@
+{
+  "name": "functions",
+  "description": "Studypup Cloud Functions — server-side recording → notes pipeline (Path B)",
+  "private": true,
+  "main": "lib/index.js",
+  "engines": {
+    "node": "20"
+  },
+  "scripts": {
+    "build": "tsc",
+    "build:watch": "tsc --watch",
+    "serve": "npm run build && firebase emulators:start --only functions",
+    "deploy": "firebase deploy --only functions",
+    "logs": "firebase functions:log"
+  },
+  "dependencies": {
+    "ffmpeg-static": "^5.2.0",
+    "firebase-admin": "^12.7.0",
+    "firebase-functions": "^6.1.1",
+    "openai": "^4.77.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.17.0",
+    "typescript": "^5.7.2"
+  }
+}

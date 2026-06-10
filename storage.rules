@@ -1,0 +1,11 @@
+rules_version = '2';
+service firebase.storage {
+  match /b/{bucket}/o {
+    // Recordings uploaded for server-side processing (Path B). The owner may
+    // upload their own audio; only the Cloud Function (admin SDK) reads it.
+    match /recordings/{uid}/{jobId} {
+      allow write: if request.auth != null && request.auth.uid == uid;
+      allow read: if false;
+    }
+  }
+}

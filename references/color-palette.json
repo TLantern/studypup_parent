@@ -1,0 +1,23 @@
+{
+  "name": "Notario Color Palette",
+  "core": {
+    "DEEP_BLACK":     { "hex": "#0D0D0F", "use": "Primary background, app shell, icon backdrop" },
+    "GRAPHITE_GRAY":  { "hex": "#1E1E22", "use": "Secondary surfaces, cards, borders, dividers" },
+    "OFF_WHITE":      { "hex": "#F7F7F5", "use": "Primary text, high-contrast elements, light backgrounds" },
+    "METALLIC_SILVER":{ "hex": "#C9CCD1", "use": "Logo highlight, icons, subtle accents" }
+  },
+  "accent": {
+    "DEEP_PASTEL_BLUE": {
+      "hex": "#7FA8FF",
+      "recommended": true,
+      "use": "Primary accent, CTAs, active states, highlights, progress bars"
+    },
+    "MUTED_EMERALD": {
+      "hex": "#5F76AE",
+      "recommended": false,
+      "use": "Alternative accent, premium calls, logo distinction"
+    }
+  },
+  "neutral_grays": ["#252525", "#3A3A3A", "#484848", "#616161", "#717171"],
+  "notes": "Minimal, Premium, Timeless. Every color has a purpose."
+}

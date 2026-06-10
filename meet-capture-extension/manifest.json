@@ -1,0 +1,26 @@
+{
+  "manifest_version": 3,
+  "name": "Notario Meeting Capture",
+  "version": "1.0.0",
+  "description": "Capture Google Meet audio and stream live transcripts to your Notario app",
+  "permissions": ["tabCapture", "activeTab", "storage", "offscreen"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    },
+    "default_title": "Notario Meeting Capture"
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["audio-worklet-processor.js", "offscreen.html"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

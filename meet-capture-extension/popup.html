@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Notario Meeting Capture</title>
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      width: 280px;
+      padding: 20px;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      background: #F7F7F5;
+      color: #0D0D0F;
+    }
+    .title {
+      font-size: 16px; font-weight: 700;
+      margin-bottom: 16px; text-align: center;
+    }
+    .label {
+      font-size: 12px; color: #6B7280; margin-bottom: 6px;
+      text-transform: uppercase; letter-spacing: 0.5px;
+    }
+    .input {
+      width: 100%; padding: 10px 12px;
+      border: 1.5px solid #D1D5DB; border-radius: 10px;
+      font-size: 18px; font-weight: 700; letter-spacing: 4px;
+      text-transform: uppercase; background: #fff; outline: none;
+      margin-bottom: 14px; text-align: center;
+    }
+    .input:focus { border-color: #7FA8FF; }
+    .btn {
+      width: 100%; padding: 12px; border-radius: 12px;
+      border: none; font-size: 15px; font-weight: 600;
+      cursor: pointer; background: #7FA8FF; color: #fff;
+      transition: opacity 0.15s;
+    }
+    .btn:hover { opacity: 0.85; }
+    .btn:disabled { opacity: 0.4; cursor: not-allowed; }
+    .btn-stop { background: #EF4444; margin-top: 8px; }
+    .status {
+      font-size: 13px; color: #6B7280;
+      text-align: center; margin-top: 12px; min-height: 18px;
+    }
+    .status.recording { color: #EF4444; font-weight: 600; }
+    .status.error { color: #DC2626; }
+    #start-section { display: block; }
+    #recording-section { display: none; }
+    #start-section.hidden { display: none; }
+    #recording-section.visible { display: block; }
+  </style>
+</head>
+<body>
+  <p class="title">Notario Meeting Capture</p>
+
+  <div id="start-section">
+    <p class="label">Session Code (from app)</p>
+    <input id="code-input" class="input" maxlength="8" placeholder="XXXXXXXX" autocomplete="off" spellcheck="false" />
+    <button id="start-btn" class="btn">Start Capturing</button>
+  </div>
+
+  <div id="recording-section">
+    <p class="status recording">● Recording in progress…</p>
+    <button id="stop-btn" class="btn btn-stop">Stop & End Session</button>
+  </div>
+
+  <p class="status" id="status-msg"></p>
+
+  <script src="popup.js"></script>
+</body>
+</html>
